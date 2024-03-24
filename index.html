@@ -1,123 +1,855 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- primary meta taga -->
     <title>Netflix</title>
-    <meta name="title" content="Netflix">
-    <meta name="description" content="Netlfix is a popular movie app.">
-    
+    <meta name="title" content="Netflix" />
+    <meta name="description" content="Netlfix is a popular movie app." />
+
     <!-- favicon -->
-    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
 
     <!-- google font links -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- custom css link  -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
 
     <!-- custom js link -->
     <script src="./assets/js/global.js" defer></script>
     <script src="./assets/js/index.js" type="module"></script>
-
-
-</head>
-<body>
-    
+  </head>
+  <body>
     <!-- header  -->
 
     <header class="header">
-        <a href="./index.html" class="logo">
-            <img src="./assets/images/logo.svg" alt="Netflix home" width="145" height="32">
-        </a>
+      <a href="./index.html" class="logo">
+        <img
+          src="./assets/images/logo.svg"
+          alt="Netflix home"
+          width="145"
+          height="32"
+        />
+      </a>
 
-        <div class="search-box search-box" search-box>
-            <div class="search-wrapper " search-wrapper>
+      <div class="search-box search-box" search-box>
+        <div class="search-wrapper" search-wrapper>
+          <input
+            type="text"
+            name="search"
+            id=""
+            placeholder="Search any movies..."
+            area-label="search movies"
+            class="search-field"
+            autocomplete="off"
+            search-field
+          />
 
-                <input type="text" name="search" id="" placeholder="Search any movies..." area-label="search movies" class="search-field" autocomplete="off" search-field>
-
-                <img src="./assets/images/search.png" alt="search" class="loading-icon">
-
-            </div>
-
-            <button class="search-btn search-toggler " search-toggler>
-                <img src="/assets/images/close.png" alt="close search box" width="24" height="24">
-            </button>
-
+          <img
+            src="./assets/images/search.png"
+            alt="search"
+            class="loading-icon"
+          />
         </div>
 
-        <button class="search-btn search-toggler" search-toggler menu-close>
-            <img src="./assets/images/search.png" alt="open search box" width="24" height="24">
+        <button class="search-btn search-toggler" search-toggler>
+          <img
+            src="/assets/images/close.png"
+            alt="close search box"
+            width="24"
+            height="24"
+          />
         </button>
+      </div>
 
-        <button class="menu-btn" menu-btn menu-toggler>
-            <img src="./assets/images/menu.png" alt="open menu" class="menu" width="24" height="24">
+      <button class="search-btn search-toggler" search-toggler menu-close>
+        <img
+          src="./assets/images/search.png"
+          alt="open search box"
+          width="24"
+          height="24"
+        />
+      </button>
 
-            <img src="./assets/images/menu-close.png" alt="close menu" class="close" width="24" height="24" >
-        </button>
+      <button class="menu-btn" menu-btn menu-toggler>
+        <img
+          src="./assets/images/menu.png"
+          alt="open menu"
+          class="menu"
+          width="24"
+          height="24"
+        />
 
+        <img
+          src="./assets/images/menu-close.png"
+          alt="close menu"
+          class="close"
+          width="24"
+          height="24"
+        />
+      </button>
     </header>
-
 
     <!-- SIDEBAR -->
     <nav class="sidebar" sidebar>
-        <div class="sidebar-inner">
-            <div class="sidebar-list">
-                <p class="title">
-                    Genre
-                </p>
+      <div class="sidebar-inner">
+        <div class="sidebar-list">
+          <p class="title">Genre</p>
 
-                <a href="./movie-list.html" menu-close class="sidebar-link">Action</a>
+          <a href="./movie-list.html" menu-close class="sidebar-link">Action</a>
 
-                <a href="./movie-list.html" menu-close class="sidebar-link">Horror</a>
+          <a href="./movie-list.html" menu-close class="sidebar-link">Horror</a>
 
-                <a href="./movie-list.html" menu-close class="sidebar-link">Comedy</a>
+          <a href="./movie-list.html" menu-close class="sidebar-link">Comedy</a>
 
-                <a href="./movie-list.html" menu-close class="sidebar-link">Adventure</a>
+          <a href="./movie-list.html" menu-close class="sidebar-link"
+            >Adventure</a
+          >
 
-                <a href="./movie-list.html" menu-close class="sidebar-link">Drama</a>
+          <a href="./movie-list.html" menu-close class="sidebar-link">Drama</a>
 
-                <a href="./movie-list.html" menu-close class="sidebar-link">Sci-Fi</a>
-
-
-            </div>
-
-            <div class="sidebar-list">
-                <p class="title">
-                    Language
-                </p>
-
-                <a href="./movie-list.html" menu-close class="sidebar-link">English</a>
-
-                <a href="./movie-list.html" menu-close class="sidebar-link">Hindi</a>
-
-                <a href="./movie-list.html" menu-close class="sidebar-link">Bengali</a>
-
-                <a href="./movie-list.html" menu-close class="sidebar-link">Mandarian</a>
-
-                <a href="./movie-list.html" menu-close class="sidebar-link">French</a>
-
-                <a href="./movie-list.html" menu-close class="sidebar-link">Spanish</a>
-            </div>
-
-            <div class="sidebar-footer">
-                <p class="copyright">
-                    Copyright@2024 <a href="https://www.themoviedb.org/" target="_blank">TMDB</a>
-                </p>
-
-                <img src="./assets/images/tmdb-logo.svg" alt="the movie database logo" width="130" height="17" >
-            </div>
+          <a href="./movie-list.html" menu-close class="sidebar-link">Sci-Fi</a>
         </div>
+
+        <div class="sidebar-list">
+          <p class="title">Language</p>
+
+          <a href="./movie-list.html" menu-close class="sidebar-link"
+            >English</a
+          >
+
+          <a href="./movie-list.html" menu-close class="sidebar-link">Hindi</a>
+
+          <a href="./movie-list.html" menu-close class="sidebar-link"
+            >Bengali</a
+          >
+
+          <a href="./movie-list.html" menu-close class="sidebar-link"
+            >Mandarian</a
+          >
+
+          <a href="./movie-list.html" menu-close class="sidebar-link">French</a>
+
+          <a href="./movie-list.html" menu-close class="sidebar-link"
+            >Spanish</a
+          >
+        </div>
+
+        <div class="sidebar-footer">
+          <p class="copyright">
+            Copyright@2024
+            <a href="https://www.themoviedb.org/" target="_blank">TMDB</a>
+          </p>
+
+          <img
+            src="./assets/images/tmdb-logo.svg"
+            alt="the movie database logo"
+            width="130"
+            height="17"
+          />
+        </div>
+      </div>
     </nav>
 
     <div class="overlay" overlay menu-toggler></div>
 
+    <!-- ----------- banner ---------- -->
+
+    <section class="banner" aria-label="popular movies">
+      <div class="banner-slider">
+        <div class="slider-item active" slider-item>
+          <img
+            src="./assets/images/slider-banner.jpg"
+            alt="Puss in Boots: The Last Wish"
+            class="img-cover"
+            loading="eager"
+          />
+
+          <div class="banner-content">
+            <h2 class="heading">Puss in Boots: The Last Wish</h2>
+
+            <div class="meta-list">
+              <div class="meta-item">2024</div>
+              <div class="meta-item card-badge">8.9</div>
+            </div>
+
+            <p class="genre">Animation, Action, Adventure</p>
+
+            <p class="banner-text">
+              Puss in Boots discovers that his passion for adventure has taken
+              its toll: He has burned through eight of his nine lives, leaving
+              him with only one life left. Puss sets out on an epic journey to
+              find the mythical Last Wish and restore his nine lives.
+            </p>
+
+            <a href="./detail.html" class="btn">
+              <img
+                src="./assets/images/play_circle.png"
+                alt="Watch Now Button"
+                width="24"
+                height="24"
+                aria-hidden="true"
+              />
+              <span class="span">Watch Now</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="slider-item" slider-item>
+          <img
+            src="./assets/images/slider-banner.jpg"
+            alt="Puss in Boots: The Last Wish"
+            class="img-cover"
+            loading="eager"
+          />
+
+          <div class="banner-content">
+            <h2 class="heading">Puss in Boots: The Last Wish</h2>
+
+            <div class="meta-list">
+              <div class="meta-item">2024</div>
+              <div class="meta-item card-badge">8.9</div>
+            </div>
+
+            <p class="genre">Animation, Action, Adventure</p>
+
+            <p class="banner-text">
+              Puss in Boots discovers that his passion for adventure has taken
+              its toll: He has burned through eight of his nine lives, leaving
+              him with only one life left. Puss sets out on an epic journey to
+              find the mythical Last Wish and restore his nine lives.
+            </p>
+
+            <a href="./detail.html" class="btn">
+              <img
+                src="./assets/images/play_circle.png"
+                alt="Watch Now Button"
+                width="24"
+                height="24"
+                aria-hidden="true"
+              />
+              <span class="span">Watch Now</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="slider-item" slider-item>
+          <img
+            src="./assets/images/slider-banner.jpg"
+            alt="Puss in Boots: The Last Wish"
+            class="img-cover"
+            loading="eager"
+          />
+
+          <div class="banner-content">
+            <h2 class="heading">Puss in Boots: The Last Wish</h2>
+
+            <div class="meta-list">
+              <div class="meta-item">2024</div>
+              <div class="meta-item card-badge">8.9</div>
+            </div>
+
+            <p class="genre">Animation, Action, Adventure</p>
+
+            <p class="banner-text">
+              Puss in Boots discovers that his passion for adventure has taken
+              its toll: He has burned through eight of his nine lives, leaving
+              him with only one life left. Puss sets out on an epic journey to
+              find the mythical Last Wish and restore his nine lives.
+            </p>
+
+            <a href="./detail.html" class="btn">
+              <img
+                src="./assets/images/play_circle.png"
+                alt="Watch Now Button"
+                width="24"
+                height="24"
+                aria-hidden="true"
+              />
+              <span class="span">Watch Now</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="slider-item" slider-item>
+          <img
+            src="./assets/images/slider-banner.jpg"
+            alt="Puss in Boots: The Last Wish"
+            class="img-cover"
+            loading="eager"
+          />
+
+          <div class="banner-content">
+            <h2 class="heading">Puss in Boots: The Last Wish</h2>
+
+            <div class="meta-list">
+              <div class="meta-item">2024</div>
+              <div class="meta-item card-badge">8.9</div>
+            </div>
+
+            <p class="genre">Animation, Action, Adventure</p>
+
+            <p class="banner-text">
+              Puss in Boots discovers that his passion for adventure has taken
+              its toll: He has burned through eight of his nine lives, leaving
+              him with only one life left. Puss sets out on an epic journey to
+              find the mythical Last Wish and restore his nine lives.
+            </p>
+
+            <a href="./detail.html" class="btn">
+              <img
+                src="./assets/images/play_circle.png"
+                alt="Watch Now Button"
+                width="24"
+                height="24"
+                aria-hidden="true"
+              />
+              <span class="span">Watch Now</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="slider-item" slider-item>
+          <img
+            src="./assets/images/slider-banner.jpg"
+            alt="Puss in Boots: The Last Wish"
+            class="img-cover"
+            loading="eager"
+          />
+
+          <div class="banner-content">
+            <h2 class="heading">Puss in Boots: The Last Wish</h2>
+
+            <div class="meta-list">
+              <div class="meta-item">2024</div>
+              <div class="meta-item card-badge">8.9</div>
+            </div>
+
+            <p class="genre">Animation, Action, Adventure</p>
+
+            <p class="banner-text">
+              Puss in Boots discovers that his passion for adventure has taken
+              its toll: He has burned through eight of his nine lives, leaving
+              him with only one life left. Puss sets out on an epic journey to
+              find the mythical Last Wish and restore his nine lives.
+            </p>
+
+            <a href="./detail.html" class="btn">
+              <img
+                src="./assets/images/play_circle.png"
+                alt="Watch Now Button"
+                width="24"
+                height="24"
+                aria-hidden="true"
+              />
+              <span class="span">Watch Now</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="slider-item" slider-item>
+          <img
+            src="./assets/images/slider-banner.jpg"
+            alt="Puss in Boots: The Last Wish"
+            class="img-cover"
+            loading="eager"
+          />
+
+          <div class="banner-content">
+            <h2 class="heading">Puss in Boots: The Last Wish</h2>
+
+            <div class="meta-list">
+              <div class="meta-item">2024</div>
+              <div class="meta-item card-badge">8.9</div>
+            </div>
+
+            <p class="genre">Animation, Action, Adventure</p>
+
+            <p class="banner-text">
+              Puss in Boots discovers that his passion for adventure has taken
+              its toll: He has burned through eight of his nine lives, leaving
+              him with only one life left. Puss sets out on an epic journey to
+              find the mythical Last Wish and restore his nine lives.
+            </p>
+
+            <a href="./detail.html" class="btn">
+              <img
+                src="./assets/images/play_circle.png"
+                alt="Watch Now Button"
+                width="24"
+                height="24"
+                aria-hidden="true"
+              />
+              <span class="span">Watch Now</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="slider-item" slider-item>
+          <img
+            src="./assets/images/slider-banner.jpg"
+            alt="Puss in Boots: The Last Wish"
+            class="img-cover"
+            loading="eager"
+          />
+
+          <div class="banner-content">
+            <h2 class="heading">Puss in Boots: The Last Wish</h2>
+
+            <div class="meta-list">
+              <div class="meta-item">2024</div>
+              <div class="meta-item card-badge">8.9</div>
+            </div>
+
+            <p class="genre">Animation, Action, Adventure</p>
+
+            <p class="banner-text">
+              Puss in Boots discovers that his passion for adventure has taken
+              its toll: He has burned through eight of his nine lives, leaving
+              him with only one life left. Puss sets out on an epic journey to
+              find the mythical Last Wish and restore his nine lives.
+            </p>
+
+            <a href="./detail.html" class="btn">
+              <img
+                src="./assets/images/play_circle.png"
+                alt="Watch Now Button"
+                width="24"
+                height="24"
+                aria-hidden="true"
+              />
+              <span class="span">Watch Now</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-control active">
+        <div class="control-inner">
+          <button class="poster-box slider-item active">
+            <img
+              src="./assets/images/slider-control.jpg"
+              alt="Slide to Puss in Boots: The Last Wish"
+              loading="lazy"
+              draggable="false"
+              class="img-cover"
+            />
+          </button>
+
+          <button class="poster-box slider-item active">
+            <img
+              src="./assets/images/slider-control.jpg"
+              alt="Slide to Puss in Boots: The Last Wish"
+              loading="lazy"
+              draggable="false"
+              class="img-cover"
+            />
+          </button>
+
+          
+
+          <button class="poster-box slider-item">
+            <img
+              src="./assets/images/slider-control.jpg"
+              alt="Slide to Puss in Boots: The Last Wish"
+              loading="lazy"
+              draggable="false"
+              class="img-cover"
+            />
+          </button>
+
+          <button class="poster-box slider-item">
+            <img
+              src="./assets/images/slider-control.jpg"
+              alt="Slide to Puss in Boots: The Last Wish"
+              loading="lazy"
+              draggable="false"
+              class="img-cover"
+            />
+          </button>
+
+          <button class="poster-box slider-item">
+            <img
+              src="./assets/images/slider-control.jpg"
+              alt="Slide to Puss in Boots: The Last Wish"
+              loading="lazy"
+              draggable="false"
+              class="img-cover"
+            />
+          </button>
+
+          <button class="poster-box slider-item">
+            <img
+              src="./assets/images/slider-control.jpg"
+              alt="Slide to Puss in Boots: The Last Wish"
+              loading="lazy"
+              draggable="false"
+              class="img-cover"
+            />
+          </button>
+
+          <button class="poster-box slider-item">
+            <img
+              src="./assets/images/slider-control.jpg"
+              alt="Slide to Puss in Boots: The Last Wish"
+              loading="lazy"
+              draggable="false"
+              class="img-cover"
+            />
+          </button>
+
+          <button class="poster-box slider-item">
+            <img
+              src="./assets/images/slider-control.jpg"
+              alt="Slide to Puss in Boots: The Last Wish"
+              loading="lazy"
+              draggable="false"
+              class="img-cover"
+            />
+          </button>
+        </div>
+      </div>
+    </section>
 
 
-</body>
+    <!-- --------------------- movie list -------------------------- -->
+
+    <section class="movie-list">
+      <div class="title-wrapper">
+        <h3 class="title-large">Upcoming Movies</h3>
+      </div>
+
+      <div class="slider-list">
+        <div class="slider-inner">
+
+          <div class="movie-card">
+            <figure class="poster-box card-banner">
+              <img
+                src="./assets/images/slider-control.jpg"
+                alt=""
+                class="img-cover"
+                draggable="false"
+              />
+            </figure>
+
+            <h4 class="title">The Black Demon</h4>
+
+            <div class="meta-list">
+              <div class="meta-item">
+                <img
+                  src="./assets/images/star.png"
+                  alt="rating"
+                  width="20"
+                  height="20"
+                  loading="lazy"
+                />
+
+                <span class="span">8.5</span>
+              </div>
+
+              <div class="card-badge">2023</div>
+            </div>
+
+            <a href="./details.html" class="card-btn"></a>
+          </div>
+
+          <div class="movie-card">
+            <figure class="poster-box card-banner">
+              <img
+                src="./assets/images/slider-control.jpg"
+                alt=""
+                class="img-cover"
+                draggable="false"
+              />
+            </figure>
+
+            <h4 class="title">The Black Demon</h4>
+
+            <div class="meta-list">
+              <div class="meta-item">
+                <img
+                  src="./assets/images/star.png"
+                  alt="rating"
+                  width="20"
+                  height="20"
+                  loading="lazy"
+                />
+
+                <span class="span">8.5</span>
+              </div>
+
+              <div class="card-badge">2023</div>
+            </div>
+
+            <a href="./details.html" class="card-btn"></a>
+          </div>
+
+          <div class="movie-card">
+            <figure class="poster-box card-banner">
+              <img
+                src="./assets/images/slider-control.jpg"
+                alt=""
+                class="img-cover"
+                draggable="false"
+              />
+            </figure>
+
+            <h4 class="title">The Black Demon</h4>
+
+            <div class="meta-list">
+              <div class="meta-item">
+                <img
+                  src="./assets/images/star.png"
+                  alt="rating"
+                  width="20"
+                  height="20"
+                  loading="lazy"
+                />
+
+                <span class="span">8.5</span>
+              </div>
+
+              <div class="card-badge">2023</div>
+            </div>
+
+            <a href="./details.html" class="card-btn"></a>
+          </div>
+
+          <div class="movie-card">
+            <figure class="poster-box card-banner">
+              <img
+                src="./assets/images/slider-control.jpg"
+                alt=""
+                class="img-cover"
+                draggable="false"
+              />
+            </figure>
+
+            <h4 class="title">The Black Demon</h4>
+
+            <div class="meta-list">
+              <div class="meta-item">
+                <img
+                  src="./assets/images/star.png"
+                  alt="rating"
+                  width="20"
+                  height="20"
+                  loading="lazy"
+                />
+
+                <span class="span">8.5</span>
+              </div>
+
+              <div class="card-badge">2023</div>
+            </div>
+
+            <a href="./details.html" class="card-btn"></a>
+          </div>
+
+          <div class="movie-card">
+            <figure class="poster-box card-banner">
+              <img
+                src="./assets/images/slider-control.jpg"
+                alt=""
+                class="img-cover"
+                draggable="false"
+              />
+            </figure>
+
+            <h4 class="title">The Black Demon</h4>
+
+            <div class="meta-list">
+              <div class="meta-item">
+                <img
+                  src="./assets/images/star.png"
+                  alt="rating"
+                  width="20"
+                  height="20"
+                  loading="lazy"
+                />
+
+                <span class="span">8.5</span>
+              </div>
+
+              <div class="card-badge">2023</div>
+            </div>
+
+            <a href="./details.html" class="card-btn"></a>
+          </div>
+
+          <div class="movie-card">
+            <figure class="poster-box card-banner">
+              <img
+                src="./assets/images/slider-control.jpg"
+                alt=""
+                class="img-cover"
+                draggable="false"
+              />
+            </figure>
+
+            <h4 class="title">The Black Demon</h4>
+
+            <div class="meta-list">
+              <div class="meta-item">
+                <img
+                  src="./assets/images/star.png"
+                  alt="rating"
+                  width="20"
+                  height="20"
+                  loading="lazy"
+                />
+
+                <span class="span">8.5</span>
+              </div>
+
+              <div class="card-badge">2023</div>
+            </div>
+
+            <a href="./details.html" class="card-btn"></a>
+          </div>
+
+          <div class="movie-card">
+            <figure class="poster-box card-banner">
+              <img
+                src="./assets/images/slider-control.jpg"
+                alt=""
+                class="img-cover"
+                draggable="false"
+              />
+            </figure>
+
+            <h4 class="title">The Black Demon</h4>
+
+            <div class="meta-list">
+              <div class="meta-item">
+                <img
+                  src="./assets/images/star.png"
+                  alt="rating"
+                  width="20"
+                  height="20"
+                  loading="lazy"
+                />
+
+                <span class="span">8.5</span>
+              </div>
+
+              <div class="card-badge">2023</div>
+            </div>
+
+            <a href="./details.html" class="card-btn"></a>
+          </div>
+
+          <div class="movie-card">
+            <figure class="poster-box card-banner">
+              <img
+                src="./assets/images/slider-control.jpg"
+                alt=""
+                class="img-cover"
+                draggable="false"
+              />
+            </figure>
+
+            <h4 class="title">The Black Demon</h4>
+
+            <div class="meta-list">
+              <div class="meta-item">
+                <img
+                  src="./assets/images/star.png"
+                  alt="rating"
+                  width="20"
+                  height="20"
+                  loading="lazy"
+                />
+
+                <span class="span">8.5</span>
+              </div>
+
+              <div class="card-badge">2023</div>
+            </div>
+
+            <a href="./details.html" class="card-btn"></a>
+          </div>
+
+          <div class="movie-card">
+            <figure class="poster-box card-banner">
+              <img
+                src="./assets/images/slider-control.jpg"
+                alt=""
+                class="img-cover"
+                draggable="false"
+              />
+            </figure>
+
+            <h4 class="title">The Black Demon</h4>
+
+            <div class="meta-list">
+              <div class="meta-item">
+                <img
+                  src="./assets/images/star.png"
+                  alt="rating"
+                  width="20"
+                  height="20"
+                  loading="lazy"
+                />
+
+                <span class="span">8.5</span>
+              </div>
+
+              <div class="card-badge">2023</div>
+            </div>
+
+            <a href="./details.html" class="card-btn"></a>
+          </div>
+
+          <div class="movie-card">
+            <figure class="poster-box card-banner">
+              <img
+                src="./assets/images/slider-control.jpg"
+                alt=""
+                class="img-cover"
+                draggable="false"
+              />
+            </figure>
+
+            <h4 class="title">The Black Demon</h4>
+
+            <div class="meta-list">
+              <div class="meta-item">
+                <img
+                  src="./assets/images/star.png"
+                  alt="rating"
+                  width="20"
+                  height="20"
+                  loading="lazy"
+                />
+
+                <span class="span">8.5</span>
+              </div>
+
+              <div class="card-badge">2023</div>
+            </div>
+
+            <a href="./details.html" class="card-btn"></a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere earum in voluptatum non aperiam consequatur. Sapiente reiciendis odit excepturi libero hic error, quo, molestias natus culpa repudiandae delectus iusto? Corporis necessitatibus porro quos repudiandae similique omnis unde tenetur odit dolorum error, nihil placeat rem voluptatum magnam atque ullam? Laboriosam aliquam quas, harum vitae quo rem minus et modi exercitationem ullam porro dignissimos, eaque molestias ut magnam eveniet! Debitis consequuntur, asperiores culpa fugiat veritatis voluptatem animi quisquam iusto enim hic voluptatibus maiores minus officiis adipisci odio cumque explicabo saepe amet perspiciatis harum, inventore autem itaque? Modi quos accusamus quaerat porro, facere dolor? Blanditiis ratione et repellendus similique sapiente possimus, aliquam qui, non quo tempora corrupti. Quasi error voluptatibus alias repudiandae sequi corporis facilis, nostrum quod ex dignissimos, deleniti illo voluptates tenetur, aliquam autem iusto! Sapiente dolores placeat explicabo, velit modi sint exercitationem corrupti quod nisi. Harum quasi commodi unde! Cum debitis quaerat odio incidunt deleniti nihil eius ducimus ipsum totam ipsa eos ad rerum ut provident earum dolorum vel animi vitae assumenda, numquam explicabo dolores neque? Accusantium, deserunt, quae possimus porro tempora nulla velit distinctio perferendis architecto quasi ut debitis blanditiis voluptatibus tenetur consequatur suscipit minima maxime eaque amet, obcaecati consequuntur sint! Libero, saepe molestiae incidunt nihil autem excepturi minus tempora eos laboriosam sequi culpa adipisci quisquam, velit, voluptatem fugiat dolore quo repellat error iusto reiciendis quas. Veniam quasi molestiae eaque perspiciatis? Ipsum, eaque culpa numquam consequuntur enim officiis deserunt ratione sed magnam, fugiat, doloremque blanditiis. Facilis voluptatem neque architecto blanditiis et eveniet ipsum, obcaecati maxime voluptas praesentium ducimus accusamus id provident possimus a iure assumenda, voluptatibus modi. Consequatur illo in minima expedita. At veniam autem laudantium vitae explicabo similique asperiores voluptates sequi quam ratione praesentium quibusdam optio aliquid, sed accusantium dolorum. Debitis accusantium nulla a fugit, sapiente maxime? Voluptate at pariatur, vel sequi consequuntur quos suscipit iure officia, culpa sed impedit nobis. Nisi porro quia fugiat dolores, nam quisquam repellat architecto ad consequatur placeat quam magni illo labore sit, perferendis in, debitis necessitatibus maxime sequi recusandae. Enim nostrum aspernatur illo amet laborum ad tempore quo aut voluptatem distinctio, necessitatibus natus. Quibusdam inventore ducimus commodi sunt? Voluptatum obcaecati nam voluptas magni dolorum ipsum necessitatibus at? Earum autem omnis doloribus consequatur quas illo. Voluptate, quaerat iusto. Corrupti qui pariatur commodi iure minus! Commodi, ad quidem est, quaerat ratione officia aut eveniet et magnam enim culpa. Exercitationem numquam sequi quae enim voluptas nobis ipsa veniam sapiente unde expedita. Ut enim magnam itaque reiciendis quod! Consequuntur, sed voluptatem voluptas impedit debitis exercitationem labore quibusdam natus harum dignissimos dolor at, distinctio sunt omnis dolorem ducimus earum nostrum vitae. Modi ratione natus, obcaecati, voluptatem eaque minima dolor cumque nulla quis, ab quibusdam aperiam mollitia facere. Qui, ad culpa deserunt quaerat ipsam sapiente suscipit velit? Consequuntur id repellat magni ab? Voluptate odit perspiciatis itaque libero, maiores ipsa? Exercitationem saepe laudantium rerum sed asperiores facere omnis eius fugit, consequatur ea excepturi vitae repudiandae, accusamus neque explicabo, laborum corrupti quisquam quia sunt cumque consequuntur. Nulla repellendus quod nostrum incidunt cupiditate quos id mollitia ullam quibusdam reiciendis earum totam tempore minus distinctio, eum a vitae vero vel velit illum fuga veritatis odit at. Ratione animi porro voluptatibus minus vitae architecto doloremque corrupti maxime dolorem perspiciatis vero deleniti autem non necessitatibus quasi quo quibusdam quidem molestias repudiandae, fugiat accusantium. Nobis reiciendis eaque aliquam, praesentium odit id voluptates error dolore cupiditate incidunt adipisci. Dolor, nisi! Consequatur, in accusamus assumenda fuga, totam exercitationem ex culpa quibusdam consectetur eaque minus voluptate facilis ducimus odit suscipit delectus. Rem iure quis non quod culpa eveniet iusto, exercitationem aliquid dicta nihil dolorum excepturi necessitatibus aperiam dolores quibusdam cum recusandae, mollitia facere nemo amet itaque libero autem asperiores. Expedita blanditiis placeat, eveniet ab vel ad deleniti doloremque, esse accusamus harum laborum eum ea architecto voluptatibus quod hic beatae aliquid temporibus reiciendis dolor quae quam, fugit in iure? Itaque vero libero sequi suscipit dignissimos, soluta quas facilis est iste ipsa unde, sed veritatis cum, dolorem ut nostrum fuga doloremque magnam vitae perspiciatis nemo aut? Ullam, ea qui! Repellat at reiciendis odio id illo nihil vel, aliquid ipsum maiores, cupiditate quis architecto sequi modi aliquam cum velit consequatur molestiae nesciunt laborum a! Sequi architecto nobis reiciendis laboriosam doloremque adipisci placeat nisi consequatur eum nemo voluptatum saepe cupiditate, magnam numquam ullam earum voluptates, iusto laborum esse recusandae maiores, delectus libero ut voluptatem? Quidem eveniet consectetur molestiae temporibus maxime illo porro asperiores provident ratione perferendis ex delectus sequi accusantium, et iusto culpa id. Blanditiis dignissimos minima, ipsa velit eos accusamus molestiae quibusdam aut aperiam sunt modi eligendi tempora esse corrupti sequi, maxime reprehenderit, eaque debitis omnis quo corporis. Modi ipsum veniam, unde enim sint aut, laboriosam deleniti reiciendis numquam eius, corrupti voluptate architecto nesciunt dolore illo optio soluta aspernatur rerum voluptatem sed quia totam tempora accusantium. A atque veniam labore repudiandae consequatur id impedit cumque debitis, neque, officia quaerat nobis aperiam nam iusto eaque, ipsam facilis! Sequi possimus praesentium sapiente quaerat deleniti officia ea veritatis voluptates ipsa, expedita culpa veniam assumenda quas, numquam at asperiores? Impedit omnis aliquid quod ullam rerum ratione maxime ab quas, dicta neque recusandae ipsum natus, veritatis, eius odio. Quis nulla necessitatibus autem animi, fugiat soluta ut possimus ab vero deserunt molestias veniam dolore suscipit, eaque adipisci optio officiis eum eligendi corrupti! Placeat, voluptatibus hic! Obcaecati, fuga repudiandae. Voluptatum distinctio ut, aspernatur nemo odio harum accusantium, a numquam asperiores id delectus ipsum totam perferendis, quaerat quidem maxime ratione nulla repellendus minus nisi accusamus quis commodi voluptas assumenda. Quia dolorem, ipsam esse rerum voluptas eius praesentium minus consequatur iusto corrupti, illum similique aut dolor deleniti amet hic accusantium, distinctio sequi veritatis veniam earum soluta saepe labore? Ab obcaecati, ipsam nobis voluptas exercitationem quo soluta eaque nam voluptates tempore dolorum cum consequatur eum sunt omnis dolor molestias mollitia illum ipsum distinctio, aliquid quam doloremque voluptatem perferendis. Consequatur voluptate praesentium eum, consequuntur quae, incidunt est ullam quibusdam dolorum quisquam, non temporibus? Id, odit. Ut in at illum, qui officia eveniet vero provident temporibus voluptatum hic necessitatibus dolorem ipsam iure veniam sint.</p>
+
+
+  </body>
 </html>
