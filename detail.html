@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- primary meta taga -->
+    <title>Netflix</title>
+    <meta name="title" content="Netflix" />
+    <meta name="description" content="Netlfix is a popular movie app." />
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
+
+    <!-- google font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- custom css link  -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- custom js link -->
+    <script src="./assets/js/global.js" defer></script>
+    <script src="./assets/js/detail.js" type="module"></script>
+  </head>
+  <body>
+    <!-- header  -->
+
+    <header class="header">
+      <a href="./index.html" class="logo">
+        <img
+          src="./assets/images/logo.svg"
+          alt="Netflix home"
+          width="145"
+          height="32"
+        />
+      </a>
+
+      <div class="search-box search-box" search-box>
+        <div class="search-wrapper" search-wrapper>
+          <input
+            type="text"
+            name="search"
+            id=""
+            placeholder="Search any movies..."
+            area-label="search movies"
+            class="search-field"
+            autocomplete="off"
+            search-field
+          />
+
+          <img
+            src="./assets/images/search.png"
+            alt="search"
+            class="loading-icon"
+          />
+        </div>
+
+        <button class="search-btn search-toggler" search-toggler>
+          <img
+            src="/assets/images/close.png"
+            alt="close search box"
+            width="24"
+            height="24"
+          />
+        </button>
+      </div>
+
+      <button class="search-btn search-toggler" search-toggler menu-close>
+        <img
+          src="./assets/images/search.png"
+          alt="open search box"
+          width="24"
+          height="24"
+        />
+      </button>
+
+      <button class="menu-btn" menu-btn menu-toggler>
+        <img
+          src="./assets/images/menu.png"
+          alt="open menu"
+          class="menu"
+          width="24"
+          height="24"
+        />
+
+        <img
+          src="./assets/images/menu-close.png"
+          alt="close menu"
+          class="close"
+          width="24"
+          height="24"
+        />
+      </button>
+    </header>
+
+    <!-- SIDEBAR -->
+    <nav class="sidebar" sidebar>
+      <div class="sidebar-inner">
+        <div class="sidebar-list">
+          <p class="title">Genre</p>
+
+          <a href="./movie-list.html" menu-close class="sidebar-link">Action</a>
+
+          <a href="./movie-list.html" menu-close class="sidebar-link">Horror</a>
+
+          <a href="./movie-list.html" menu-close class="sidebar-link">Comedy</a>
+
+          <a href="./movie-list.html" menu-close class="sidebar-link"
+            >Adventure</a
+          >
+
+          <a href="./movie-list.html" menu-close class="sidebar-link">Drama</a>
+
+          <a href="./movie-list.html" menu-close class="sidebar-link">Sci-Fi</a>
+        </div>
+
+        <div class="sidebar-list">
+          <p class="title">Language</p>
+
+          <a href="./movie-list.html" menu-close class="sidebar-link"
+            >English</a
+          >
+
+          <a href="./movie-list.html" menu-close class="sidebar-link">Hindi</a>
+
+          <a href="./movie-list.html" menu-close class="sidebar-link"
+            >Bengali</a
+          >
+
+          <a href="./movie-list.html" menu-close class="sidebar-link"
+            >Mandarian</a
+          >
+
+          <a href="./movie-list.html" menu-close class="sidebar-link">French</a>
+
+          <a href="./movie-list.html" menu-close class="sidebar-link"
+            >Spanish</a
+          >
+        </div>
+
+        <div class="sidebar-footer">
+          <p class="copyright">
+            Copyright@2024
+            <a href="https://www.themoviedb.org/" target="_blank">TMDB</a>
+          </p>
+
+          <img
+            src="./assets/images/tmdb-logo.svg"
+            alt="the movie database logo"
+            width="130"
+            height="17"
+          />
+        </div>
+      </div>
+    </nav>
+
+    <div class="overlay" overlay menu-toggler></div>
+
+    <!-- ----------- banner ---------- -->
+
+    <div class="container">
+      <!-- --------------------- movie list -------------------------- -->
+
+      <div class="movie-detail">
+        <div class="backdrop-image" style="background-image: url(./assets/images/slider-banner.jpg);"></div>
+
+        <figure class="poster-box movie-poster">
+            <img src="./assets/images/slider-control.jpg" alt="Puss in Boots: The Last Wish" class="img-cover">
+        </figure>
+
+        <div class="detail-box">
+
+            <div class="detail-content">
+                <h1 class="heading">Puss in Boots: The Last Wish</h1>
+
+                <div class="meta-list">
+                    <div class="meta-item">
+                        <img src="./assets/images/star.png" alt="rating" width="20" height="20">
+
+                        <span class="span">8.4</span>
+                    </div>
+
+                    <div class="separator"></div>
+
+                    <div class="meta-item">162m</div>
+
+                    <div class="separator"></div>
+
+                    <div class="meta-item">2022</div>
+
+                    <div class="meta-item card-badge">PG-13</div>
+
+                </div>
+
+                <p class="genre">Animation, Action, Adventure</p>
+
+                <p class="overview">Puss in Boots discovers that his passion for adventure has taken its toll: He has burned through eight of his nine lives, leaving him with only one life left. Puss sets out on an epic journey to find the mythical Last Wish and restore his nine lives.</p>
+
+                <ul class="detail-list">
+
+                    <div class="list-item">
+                        <p class="list-name">Directed By</p>
+
+                        <p>Ryan Coogler</p>
+
+                    </div>
+                </ul>
+
+
+            </div>
+
+            <div class="title-wrapper">
+                <h3 class="title-large">Trailers and Clips</h3>
+            </div>
+
+            <div class="slider-list">
+                <div class="slider-inner">
+
+                    <div class="video-card"></div>
+
+                    <div class="video-card"></div>
+
+                    <div class="video-card"></div>
+                    
+                    <div class="video-card"></div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <section class="movie-list">
+        <div class="title-wrapper">
+          <h3 class="title-large">You May Also Like</h3>
+        </div>
+
+        <div class="slider-list">
+          <div class="slider-inner">
+
+            <div class="movie-card">
+              <figure class="poster-box card-banner">
+                <img
+                  src="./assets/images/slider-control.jpg"
+                  alt=""
+                  class="img-cover"
+                  draggable="false"
+                />
+              </figure>
+
+              <h4 class="title">The Black Demon</h4>
+
+              <div class="meta-list">
+                <div class="meta-item">
+                  <img
+                    src="./assets/images/star.png"
+                    alt="rating"
+                    width="20"
+                    height="20"
+                    loading="lazy"
+                  />
+
+                  <span class="span">8.5</span>
+                </div>
+
+                <div class="card-badge">2023</div>
+              </div>
+
+              <a href="./detail.html" class="card-btn"></a>
+            </div>
+
+            <div class="movie-card">
+                <figure class="poster-box card-banner">
+                  <img
+                    src="./assets/images/slider-control.jpg"
+                    alt=""
+                    class="img-cover"
+                    draggable="false"
+                  />
+                </figure>
+  
+                <h4 class="title">The Black Demon</h4>
+  
+                <div class="meta-list">
+                  <div class="meta-item">
+                    <img
+                      src="./assets/images/star.png"
+                      alt="rating"
+                      width="20"
+                      height="20"
+                      loading="lazy"
+                    />
+  
+                    <span class="span">8.5</span>
+                  </div>
+  
+                  <div class="card-badge">2023</div>
+                </div>
+  
+                <a href="./detail.html" class="card-btn"></a>
+              </div>
+
+              <div class="movie-card">
+                <figure class="poster-box card-banner">
+                  <img
+                    src="./assets/images/slider-control.jpg"
+                    alt=""
+                    class="img-cover"
+                    draggable="false"
+                  />
+                </figure>
+  
+                <h4 class="title">The Black Demon</h4>
+  
+                <div class="meta-list">
+                  <div class="meta-item">
+                    <img
+                      src="./assets/images/star.png"
+                      alt="rating"
+                      width="20"
+                      height="20"
+                      loading="lazy"
+                    />
+  
+                    <span class="span">8.5</span>
+                  </div>
+  
+                  <div class="card-badge">2023</div>
+                </div>
+  
+                <a href="./detail.html" class="card-btn"></a>
+              </div>
+
+              <div class="movie-card">
+                <figure class="poster-box card-banner">
+                  <img
+                    src="./assets/images/slider-control.jpg"
+                    alt=""
+                    class="img-cover"
+                    draggable="false"
+                  />
+                </figure>
+  
+                <h4 class="title">The Black Demon</h4>
+  
+                <div class="meta-list">
+                  <div class="meta-item">
+                    <img
+                      src="./assets/images/star.png"
+                      alt="rating"
+                      width="20"
+                      height="20"
+                      loading="lazy"
+                    />
+  
+                    <span class="span">8.5</span>
+                  </div>
+  
+                  <div class="card-badge">2023</div>
+                </div>
+  
+                <a href="./detail.html" class="card-btn"></a>
+              </div>
+
+              <div class="movie-card">
+                <figure class="poster-box card-banner">
+                  <img
+                    src="./assets/images/slider-control.jpg"
+                    alt=""
+                    class="img-cover"
+                    draggable="false"
+                  />
+                </figure>
+  
+                <h4 class="title">The Black Demon</h4>
+  
+                <div class="meta-list">
+                  <div class="meta-item">
+                    <img
+                      src="./assets/images/star.png"
+                      alt="rating"
+                      width="20"
+                      height="20"
+                      loading="lazy"
+                    />
+  
+                    <span class="span">8.5</span>
+                  </div>
+  
+                  <div class="card-badge">2023</div>
+                </div>
+  
+                <a href="./detail.html" class="card-btn"></a>
+              </div>
+
+              <div class="movie-card">
+                <figure class="poster-box card-banner">
+                  <img
+                    src="./assets/images/slider-control.jpg"
+                    alt=""
+                    class="img-cover"
+                    draggable="false"
+                  />
+                </figure>
+  
+                <h4 class="title">The Black Demon</h4>
+  
+                <div class="meta-list">
+                  <div class="meta-item">
+                    <img
+                      src="./assets/images/star.png"
+                      alt="rating"
+                      width="20"
+                      height="20"
+                      loading="lazy"
+                    />
+  
+                    <span class="span">8.5</span>
+                  </div>
+  
+                  <div class="card-badge">2023</div>
+                </div>
+  
+                <a href="./detail.html" class="card-btn"></a>
+              </div>
+
+              <div class="movie-card">
+                <figure class="poster-box card-banner">
+                  <img
+                    src="./assets/images/slider-control.jpg"
+                    alt=""
+                    class="img-cover"
+                    draggable="false"
+                  />
+                </figure>
+  
+                <h4 class="title">The Black Demon</h4>
+  
+                <div class="meta-list">
+                  <div class="meta-item">
+                    <img
+                      src="./assets/images/star.png"
+                      alt="rating"
+                      width="20"
+                      height="20"
+                      loading="lazy"
+                    />
+  
+                    <span class="span">8.5</span>
+                  </div>
+  
+                  <div class="card-badge">2023</div>
+                </div>
+  
+                <a href="./detail.html" class="card-btn"></a>
+              </div>
+
+              <div class="movie-card">
+                <figure class="poster-box card-banner">
+                  <img
+                    src="./assets/images/slider-control.jpg"
+                    alt=""
+                    class="img-cover"
+                    draggable="false"
+                  />
+                </figure>
+  
+                <h4 class="title">The Black Demon</h4>
+  
+                <div class="meta-list">
+                  <div class="meta-item">
+                    <img
+                      src="./assets/images/star.png"
+                      alt="rating"
+                      width="20"
+                      height="20"
+                      loading="lazy"
+                    />
+  
+                    <span class="span">8.5</span>
+                  </div>
+  
+                  <div class="card-badge">2023</div>
+                </div>
+  
+                <a href="./detail.html" class="card-btn"></a>
+              </div>
+
+              <div class="movie-card">
+                <figure class="poster-box card-banner">
+                  <img
+                    src="./assets/images/slider-control.jpg"
+                    alt=""
+                    class="img-cover"
+                    draggable="false"
+                  />
+                </figure>
+  
+                <h4 class="title">The Black Demon</h4>
+  
+                <div class="meta-list">
+                  <div class="meta-item">
+                    <img
+                      src="./assets/images/star.png"
+                      alt="rating"
+                      width="20"
+                      height="20"
+                      loading="lazy"
+                    />
+  
+                    <span class="span">8.5</span>
+                  </div>
+  
+                  <div class="card-badge">2023</div>
+                </div>
+  
+                <a href="./detail.html" class="card-btn"></a>
+              </div>
+
+              <div class="movie-card">
+                <figure class="poster-box card-banner">
+                  <img
+                    src="./assets/images/slider-control.jpg"
+                    alt=""
+                    class="img-cover"
+                    draggable="false"
+                  />
+                </figure>
+  
+                <h4 class="title">The Black Demon</h4>
+  
+                <div class="meta-list">
+                  <div class="meta-item">
+                    <img
+                      src="./assets/images/star.png"
+                      alt="rating"
+                      width="20"
+                      height="20"
+                      loading="lazy"
+                    />
+  
+                    <span class="span">8.5</span>
+                  </div>
+  
+                  <div class="card-badge">2023</div>
+                </div>
+  
+                <a href="./detail.html" class="card-btn"></a>
+              </div>
+
+              <div class="movie-card">
+                <figure class="poster-box card-banner">
+                  <img
+                    src="./assets/images/slider-control.jpg"
+                    alt=""
+                    class="img-cover"
+                    draggable="false"
+                  />
+                </figure>
+  
+                <h4 class="title">The Black Demon</h4>
+  
+                <div class="meta-list">
+                  <div class="meta-item">
+                    <img
+                      src="./assets/images/star.png"
+                      alt="rating"
+                      width="20"
+                      height="20"
+                      loading="lazy"
+                    />
+  
+                    <span class="span">8.5</span>
+                  </div>
+  
+                  <div class="card-badge">2023</div>
+                </div>
+  
+                <a href="./detail.html" class="card-btn"></a>
+              </div>
+
+              <div class="movie-card">
+                <figure class="poster-box card-banner">
+                  <img
+                    src="./assets/images/slider-control.jpg"
+                    alt=""
+                    class="img-cover"
+                    draggable="false"
+                  />
+                </figure>
+  
+                <h4 class="title">The Black Demon</h4>
+  
+                <div class="meta-list">
+                  <div class="meta-item">
+                    <img
+                      src="./assets/images/star.png"
+                      alt="rating"
+                      width="20"
+                      height="20"
+                      loading="lazy"
+                    />
+  
+                    <span class="span">8.5</span>
+                  </div>
+  
+                  <div class="card-badge">2023</div>
+                </div>
+  
+                <a href="./detail.html" class="card-btn"></a>
+              </div>
+
+          </div>
+        </div>
+      </section>
+    </div>
+
+
+  </body>
+</html>

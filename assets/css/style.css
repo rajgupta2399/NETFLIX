@@ -141,10 +141,8 @@ body{
   #REUSED STYLE
 \*-----------------------------------*/
 
-.search-wrapper::before{
-  position: absolute;
-  top: 14px;
-  right: 12px;
+.search-wrapper::before,
+.load-more::before{
   content: "";
   width: 20px;
   height: 20px;
@@ -155,6 +153,25 @@ body{
   display: none;
 }
 
+.search-wrapper::before{
+  position: absolute;
+  top: 14px;
+  right: 12px;
+}
+.load-more{
+  background-color: var(--primary-variant);
+  margin-inline: auto;
+  margin-block: 36px 60px;
+}
+
+.load-more:is(:hover, :focus-visible){
+  --primary-variant : hsla(350,67%,39%,1);
+}
+
+
+.load-more.loading::before{
+  display: block;
+}
 
 .search-wrapper.searching::before{
   display: block;
@@ -518,7 +535,6 @@ body{
 }
 
 
-
 .banner{
   position: relative;
   height: 700px;
@@ -651,7 +667,7 @@ body{
  }
  
  .movie-card .card-banner{
-   min-width: 100%;
+   width: 100px;
  }
  
  .movie-card .title{
@@ -673,6 +689,7 @@ body{
  
  
  .meta-list{
+  /* border: 2px solid red; */
    display: flex;
    flex-wrap: wrap;
    justify-content: flex-start;
@@ -730,9 +747,98 @@ body{
   #DETAIL PAGE
 \*-----------------------------------*/
 
+.backdrop-image{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 690px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+
+.backdrop-image::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(0deg, hsla(250,13%,11%,1), hsla(255, 14%, 11%, 0.844));
+}
+
+.movie-detail .movie-poster{
+  max-width: 300px;
+  width: 100%;
+}
+
+.movie-detail .heading{
+  margin-block: 24px 12px;
+}
+
+.movie-detail :is(.meta-list,.genre){
+  color: var(--text-color);
+}
+
+.movie-detail .genre{
+  margin-block: 12px 16px;
+}
+
+.detail-list{
+  margin-block: 24px 32px;
+}
+
+.movie-detail .list-item{
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-block-end: 12px;
+}
+
+.movie-detail .list-name{
+  color: var(--text-color);
+  min-width: 112px;
+}
+
+.separator{
+  width: 4px;
+  height: 4px;
+  background-color: var(--white-alpha-20);
+  border-radius: var(--radius-8);
+}
+
+.video-card{
+  background-image: url(../images/video-bg-icon.png);
+  border: 2px solid var(--background);
+  aspect-ratio: 16/9;
+  flex-shrink: 0;
+  max-width: 500px;
+  width: calc(100% - 40px);
+}
+
+
+
 /*-----------------------------------*\
   #MOVIE LIST PAGE
 \*-----------------------------------*/
+
+
+.genre-list .title-wrapper{
+  margin-block-end: 56px;
+}
+
+.grid-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px,1fr));
+  column-gap: 16px;
+  row-gap: 35px;
+}
+
+.genre-list :is(.movie-card, .card-banner){
+  width: 100%;
+}
+
+
 
 /*-----------------------------------*\
   #SEARCH MODAL
