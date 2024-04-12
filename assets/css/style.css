@@ -498,7 +498,9 @@ body{
   z-index: 1;
 }
 
-.container::after{
+.container::after,
+.search-modal::after
+{
   content: "";
   position: fixed;
   bottom: 0;
@@ -603,6 +605,7 @@ body{
 }
 
 .banner-text{
+  color: #fff;
   -webkit-line-clamp: 2;
   margin-block-end: 24px;
 }
@@ -829,12 +832,12 @@ body{
 
 .grid-list{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
   column-gap: 16px;
   row-gap: 35px;
 }
 
-.genre-list :is(.movie-card, .card-banner){
+:is(.genre-list, .search-modal) :is(.movie-card, .card-banner){
   width: 100%;
 }
 
@@ -843,6 +846,30 @@ body{
 /*-----------------------------------*\
   #SEARCH MODAL
 \*-----------------------------------*/
+
+.search-modal{
+  position: fixed;
+  top: 96px;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  background-color: var(--surface);
+  padding: 50px 20px;
+  z-index: 4;
+  overflow-y: overlay;
+  display: none;
+}
+
+.search-modal.active{
+  display: block;
+}
+
+.search-modal .label{
+  color: var(--primary);
+  font-weight: var(--weight-bold);
+  margin-block-end: 8px;
+}
+
 
 /*-----------------------------------*\
   #MEDIA QUERIES

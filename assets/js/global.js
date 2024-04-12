@@ -1,25 +1,26 @@
 // "use strict"
 
-// add event on multiple element 
+// add event on multiple element
 
-const addEventOnElements = function (elements,eventType,callback){
-    for(const elem of elements) elem.addEventListener(eventType,callback);
-}
+const addEventOnElements = function (elements, eventType, callback) {
+  for (const elem of elements) elem.addEventListener(eventType, callback);
+};
 
-// toggle search box in mob device 
+// toggle search box in mob device
 
 const searchBox = document.querySelector(".search-box");
 const searchTogglers = document.querySelectorAll(".search-toggler");
 
-addEventOnElements(searchTogglers,"click",function(){
-    searchBox.classList.toggle("active");
-})
-
-
-const menuBtn = document.querySelector(".menu-btn");
-const sidebar = document.querySelector(".sidebar");
-
-menuBtn.addEventListener("click", function () {
-  sidebar.classList.toggle("active");
-  menuBtn.classList.toggle("active");
+addEventOnElements(searchTogglers, "click", function () {
+  searchBox.classList.toggle("active");
 });
+
+const getMovieDetail = function (movieId) {
+  window.localStorage.setItem("movieId", String(movieId));
+};
+
+const getMovieList = function(urlParam, genreName){
+  window.localStorage.setItem("urlParam", urlParam)
+  window.localStorage.setItem("genreName", genreName)
+}
+
